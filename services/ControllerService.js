@@ -14,7 +14,7 @@ var make = (fp, name) => {
       }
 
       fs.writeFileSync(
-        path.join(__dirname, `../src/${cf.targetPath}/${cf.version}`, fp, `${name}Controller.ts`),
+        path.join(process.cwd(), `./src/${cf.targetPath}/${cf.version}`, fp, `${name}Controller.ts`),
         template
           .replaceAll("%name%", name),
         (err) => {

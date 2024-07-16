@@ -14,7 +14,7 @@ var make = (fp, name) => {
       }
 
       fs.writeFileSync(
-        path.join(__dirname, `../src/${cf.targetPath}/${cf.version}`, fp, `${name}Repo.ts`),
+        path.join(process.cwd(), `./src/${cf.targetPath}/${cf.version}`, fp, `${name}Repo.ts`),
         template
           .replaceAll("%repo_name%", name)
           .replace("%db_dialect%", cs.pascalCase(cf.db_dialect)),

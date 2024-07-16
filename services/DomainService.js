@@ -14,26 +14,26 @@ var make = function (options) {
 
   if (
     !fs.existsSync(
-      path.join(__dirname, "../src", cf.targetPath, cf.version, fullPath)
+      path.join(process.cwd(), "./src", cf.targetPath, cf.version, fullPath)
     )
   ) {
     fs.mkdirSync(
-      path.join(__dirname, "../src", cf.targetPath, cf.version, fullPath),
+      path.join(process.cwd(), "./src", cf.targetPath, cf.version, fullPath),
       {
         recursive: true,
       }
     );
   }else {
     console.error("Domain already exist");
-    throw Error("Domain already exist");
+    process.exit(0);
   }
 
   pathArr.forEach((item, ix) => {
     if (
       !fs.existsSync(
         path.join(
-          __dirname,
-          "../src",
+          process.cwd(),
+          "./src",
           cf.targetPath,
           cf.version,
           ...pathArr.slice(0, ix + 1),
@@ -43,8 +43,8 @@ var make = function (options) {
     ) {
       fs.writeFileSync(
         path.join(
-          __dirname,
-          "../src",
+          process.cwd(),
+          "./src",
           cf.targetPath,
           cf.version,
           ...pathArr.slice(0, ix+1),
@@ -58,6 +58,11 @@ var make = function (options) {
       );
     }
   });
+
+  if (options['migration']) {
+    var pm = require("./PrismaService");
+    pm(name);
+  }
 
   rm(fullPath, name);
   cm(fullPath, name);
