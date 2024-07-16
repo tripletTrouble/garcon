@@ -1,0 +1,55 @@
+import { %name% } from "@prisma/client";
+import %name%Repo from "./%name%Repo";
+import { NotContent } from "@type/ApiError";
+
+export default class %name%Usecase {
+  constructor(private repo: %name%Repo<%name%>) {}
+
+  async create(user: %name%) {
+    try {
+      // Your code here
+    } catch (error) {
+      if (error) {
+        throw error;
+      }
+    }
+  }
+
+  async get() {
+    try {
+      // Your code here
+    } catch (error) {
+      if (error) {
+        throw error;
+      }
+    }
+  }
+
+  async findOne(id: number) {
+    try {
+      // Your code here
+    } catch (error) {
+      if (error) {
+        throw error;
+      }
+    }
+  }
+
+  async updateOne(id: number, data: Partial<%name%>) {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async deleteOne(id: number) {
+    try {
+      // Your code here
+    } catch (error) {
+      if (error) {
+        throw error;
+      }
+    }
+  }
+}

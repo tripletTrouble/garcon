@@ -1,0 +1,22 @@
+{
+  "name": "paper-plane",
+  "version": "0.0.1",
+  "description": "Domain driven file automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cli",
+    "nodejs"
+  ],
+  "author": "tripletTrouble",
+  "license": "MIT",
+  "bin": {
+    "garcon": "./index.js"
+  },
+  "dependencies": {
+    "change-case-all": "^2.1.0",
+    "minimist": "^1.2.8"
+  }
+}

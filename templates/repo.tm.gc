@@ -1,0 +1,49 @@
+import { %repo_name% } from "@prisma/client";
+
+export default interface %repo_name%Repo<T> {
+  create: (user: T) => Promise<T>;
+  get: (query: any) => Promise<T[]>;
+  findOne: (id: number) => Promise<T>;
+  updateOne: (id: number, data: Partial<T>) => Promise<T>;
+  deleteOne: (id: number) => Promise<T>;
+}
+
+export class %repo_name%%db_dialect%Repo implements %repo_name%Repo<%repo_name%> {
+  async updateOne(id: number, input: Partial<%repo_name%>): Promise<any> {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+  async deleteOne(id: number): Promise<any> {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+  async findOne(id: number): Promise<%repo_name%> {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async create(user: %repo_name%): Promise<%repo_name%> {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async get(query: any): Promise<%repo_name%[]> {
+    try {
+      // Your code here
+    } catch (error) {
+      throw error;
+    }
+  }
+}

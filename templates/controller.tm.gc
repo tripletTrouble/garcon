@@ -1,0 +1,45 @@
+import { NextFunction, Request, Response } from "express";
+import %name%usecase from "./%name%Usecase";
+
+export class %name%Controller {
+  constructor(private usecase: %name%usecase) {}
+  async find(req: Request, res: Response, next: NextFunction) {
+    try {
+      // Your code here
+    } catch (error: Error | any) {
+      next(error);
+    }
+  }
+
+  async findById(req: Request, res: Response, next: NextFunction) {
+    try {
+      // Your code here
+    } catch (error: Error | any) {
+      next(error);
+    }
+  }
+
+  async update(req: Request, res: Response, next: NextFunction) {
+    try {
+      // Your code here
+    } catch (error: Error | any) {
+      next(error);
+    }
+  }
+
+  async create(req: Request, res: Response, next: NextFunction) {
+    try {
+      // Your code here
+    } catch (error: Error | any) {
+      next(error);
+    }
+  }
+
+  async delete(req: Request, res: Response, next: NextFunction) {
+    try {
+      // Your code here
+    } catch (error: Error | any) {
+      next(error);
+    }
+  }
+}
